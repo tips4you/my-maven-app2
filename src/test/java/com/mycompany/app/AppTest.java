@@ -33,6 +33,7 @@ public class AppTest
     @Test
     public void testAppMain()
     {
+	System.out.println("Hello World Test from Varun....." );
         App.main(null);
         try {
             assertEquals("Hello World!" + System.getProperty("line.separator"), outContent.toString());
