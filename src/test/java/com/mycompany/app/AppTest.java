@@ -37,7 +37,7 @@ public class AppTest
 		App.main(null);
 
 
-		String actualMsg="Hello World!";
+		String actualMsg="Hello ?!?!";
 
 		System.out.println("Back to Jenkins CICD..." );
 
