@@ -37,7 +37,7 @@ public class AppTest
 		App.main(null);
 
 
-		String actualMsg="Not Hello World!";
+		String actualMsg="Hello World Test from Varun.....";
 
 		System.out.println("Hello World Test from Varun....." );
 
