@@ -13,41 +13,44 @@ import static org.junit.Assert.*;
 public class AppTest
 {
 
-	
-    private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
 
-    @Before
-    public void setUpStreams() {
-        System.setOut(new PrintStream(outContent));
-    }
+	private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
 
-    @Test
-    public void testAppConstructor() {
-        try {
-            new App();
-            System.out.println("Hello World Test from Varun....." );
-        } catch (Exception e) {
-            fail("Construction failed.");
-        }
-    }
+	@Before
+	public void setUpStreams() {
+		System.setOut(new PrintStream(outContent));
+	}
 
-    @Test
-    public void testAppMain()
-    {
-        App.main(null);
-        
-        System.out.println("Hello World Test from Varun....." );
-        
-//        try {
-//            assertEquals("Hello World!" + System.getProperty("line.separator"), outContent.toString());
-//        } catch (AssertionError e) {
-//            fail("\"message\" is not \"Hello World!\"");
-//        }
-    }
+	@Test
+	public void testAppConstructor() {
+		try {
+			new App();
+			System.out.println("Hello World Test from Varun....." );
+		} catch (Exception e) {
+			fail("Construction failed.");
+		}
+	}
 
-    @After
-    public void cleanUpStreams() {
-        System.setOut(null);
-    }
+	@Test
+	public void testAppMain()
+	{
+		App.main(null);
+
+
+		String actualMsg="Hello World!";
+
+		System.out.println("Hello World Test from Varun....." );
+
+		try {
+			assertEquals("Hello World!", actualMsg);
+		} catch (AssertionError e) {
+			fail("\"message\" is not \"Hello World!\"");
+		}
+	}
+
+	@After
+	public void cleanUpStreams() {
+		System.setOut(null);
+	}
 
 }
