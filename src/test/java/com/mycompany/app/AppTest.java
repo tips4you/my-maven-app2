@@ -37,9 +37,9 @@ public class AppTest
 		App.main(null);
 
 
-		String actualMsg="Hello World Test from Varun.....";
+		String actualMsg="Hello World!";
 
-		System.out.println("Hello World Test from Varun....." );
+		System.out.println("Back to Jenkins CICD..." );
 
 		try {
 			assertEquals("Hello World!", actualMsg);
